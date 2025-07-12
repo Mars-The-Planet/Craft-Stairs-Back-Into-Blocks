@@ -60,7 +60,6 @@ public class RecipeManagerMixin {
             JsonElement je = entry.getValue();
             if (hasStairsPattern(je)) {
                 String[] set = extractKeyAndResult(je);
-                System.out.println(Arrays.toString(extractKeyAndResult(je)));
                 if(set != null){
                     DeimosRecipeGenerator.createShapedRecipeJson(
                             Lists.newArrayList('#'),
