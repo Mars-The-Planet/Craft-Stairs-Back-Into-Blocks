@@ -37,7 +37,7 @@ public class RecipeManagerMixin {
                         Lists.newArrayList(
                                 '#'
                         ),
-                        Lists.newArrayList(ResourceLocation.parse(set[1])),
+                        Lists.newArrayList(ResourceLocation.parse(set[set.length - 1])),
                         Lists.newArrayList("item"),
                         Lists.newArrayList(
                                 "##",
