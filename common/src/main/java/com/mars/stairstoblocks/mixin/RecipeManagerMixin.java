@@ -16,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -37,13 +36,13 @@ public class RecipeManagerMixin {
                         Lists.newArrayList(
                                 '#'
                         ),
-                        Lists.newArrayList(ResourceLocation.parse(set[1])),
+                        Lists.newArrayList(new ResourceLocation(set[1])),
                         Lists.newArrayList("item"),
                         Lists.newArrayList(
                                 "##",
                                 "##"
                         ),
-                        ResourceLocation.parse(set[0]), block_amount);
+                        new ResourceLocation(set[0]), block_amount);
             }
         }
     }

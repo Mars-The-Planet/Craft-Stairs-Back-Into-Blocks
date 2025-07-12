@@ -20,13 +20,13 @@ public class CommonClass {
                         Lists.newArrayList(
                                 '#'
                         ),
-                        Lists.newArrayList(ResourceLocation.parse(set[1])),
+                        Lists.newArrayList(new ResourceLocation(set[1])),
                         Lists.newArrayList("item"),
                         Lists.newArrayList(
                                 "##",
                                 "##"
                         ),
-                        ResourceLocation.parse(set[0]), block_amount);
+                        new ResourceLocation(set[0]), block_amount);
             }
         }
     }
