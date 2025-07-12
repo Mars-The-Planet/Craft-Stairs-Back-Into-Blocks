@@ -3,7 +3,7 @@
 <a href="https://discord.gg/2CUh6gMuCt" ><img src="https://img.shields.io/discord/1027252425960198165?color=5b6ee1&amp;label=Discord&amp;style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Discord" /></a> 
 <a href="https://ko-fi.com/mars_" ><img src="https://img.shields.io/badge/ko--fi-donate-FF5E5B?style=for-the-badge&amp;logo=ko-fi&amp;logoColor=white" alt="Support me on ko-fi" /></a>
 </strong></h5></center>
-<center><p style="text-align: center;">With this fully automated and configurable mod, you can craft stairs back into full blocks. Allowing you to recycle stairs you no longer need. These recipes can be generated automatically by scanning for stair shape recipes, or you can configure them yourself.</p>
+<center><p style="text-align: center;">With this fully automated and configurable mod, you can craft stairs back into full blocks. Allowing you to recycle stairs you no longer need. These recipes can be generated automatically by scanning for stair shape recipes, or you can configure them yourself. Thanks to the automatic scanning, the mod is highly compatible with other mods that add new types of stairs, requiring no manual setup.</p>
 <p style="text-align: center;"><img src="https://i.imgur.com/QsMZSIL.png"/></p></center>
 <details>
 <summary><strong>Configuration</strong></summary>
