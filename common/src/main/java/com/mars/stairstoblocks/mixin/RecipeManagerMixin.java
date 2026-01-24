@@ -4,7 +4,7 @@ import com.google.common.collect.Lists;
 import com.google.gson.*;
 import com.mars.deimos.datagen.DeimosRecipeGenerator;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.profiling.ProfilerFiller;
@@ -30,18 +30,18 @@ public class RecipeManagerMixin {
         if(add_recipes_manually)
             return;
 
-        SortedMap<ResourceLocation, JsonElement> rawJsonMap = new TreeMap<>();
+        SortedMap<Identifier, JsonElement> rawJsonMap = new TreeMap<>();
         String recipesPath = Registries.elementsDirPath(Registries.RECIPE);
 
-        Map<ResourceLocation, Resource> allRecipeResources = resourceManager.listResources(
+        Map<Identifier, Resource> allRecipeResources = resourceManager.listResources(
                 recipesPath,
                 // filter predicate: only keep paths ending in ".json"
                 rl -> rl.getPath().endsWith(".json")
         );
 
 
-        // Iterate over each ResourceLocation key in that map
-        for (ResourceLocation loc : allRecipeResources.keySet()) {
+        // Iterate over each Identifier key in that map
+        for (Identifier loc : allRecipeResources.keySet()) {
             Optional<Resource> optRes = resourceManager.getResource(loc);
             if (optRes.isEmpty()) {
                 // If getResource couldn’t actually open it, skip
@@ -56,18 +56,18 @@ public class RecipeManagerMixin {
             }
         }
 
-        for (Map.Entry<ResourceLocation, JsonElement> entry : rawJsonMap.entrySet()) {
+        for (Map.Entry<Identifier, JsonElement> entry : rawJsonMap.entrySet()) {
             JsonElement je = entry.getValue();
             if (hasStairsPattern(je)) {
                 String[] set = extractKeyAndResult(je);
                 if(set != null){
                     DeimosRecipeGenerator.createShapedRecipeJson(
                             Lists.newArrayList('#'),
-                            Lists.newArrayList(ResourceLocation.parse(set[set.length - 1])),
+                            Lists.newArrayList(Identifier.parse(set[set.length - 1])),
                             Lists.newArrayList("item"),
                             Lists.newArrayList("##",
                                     "##"),
-                            ResourceLocation.parse(set[0]), block_amount);
+                            Identifier.parse(set[0]), block_amount);
                 }
             }
         }

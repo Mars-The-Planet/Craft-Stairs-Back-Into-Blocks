@@ -3,7 +3,7 @@ package com.mars.stairstoblocks;
 import com.google.common.collect.Lists;
 import com.mars.deimos.config.DeimosConfig;
 import com.mars.deimos.datagen.DeimosRecipeGenerator;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import static com.mars.stairstoblocks.StairsToBlocksConfig.*;
 
@@ -20,13 +20,13 @@ public class CommonClass {
                         Lists.newArrayList(
                                 '#'
                         ),
-                        Lists.newArrayList(ResourceLocation.parse(set[1])),
+                        Lists.newArrayList(Identifier.parse(set[1])),
                         Lists.newArrayList("item"),
                         Lists.newArrayList(
                                 "##",
                                 "##"
                         ),
-                        ResourceLocation.parse(set[0]), block_amount);
+                        Identifier.parse(set[0]), block_amount);
             }
         }
     }
