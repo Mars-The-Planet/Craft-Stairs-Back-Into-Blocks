@@ -1,5 +1,6 @@
 {
   "stairstoblocks.deimosconfig.title": "Craft Stairs Back Into Blocks Config",
+  "stairstoblocks.deimosconfig.show_wishful_recipes_message": "Show Wishful Recipes message",
   "stairstoblocks.deimosconfig.block_amount": "How many blocks you get",
   "stairstoblocks.deimosconfig.add_recipes_manually": "Stops generating block recipes automatically and generates them based on the list bellow",
   "stairstoblocks.deimosconfig.block_stairs_list": "List of stairs and the matching blocks you craft from them"

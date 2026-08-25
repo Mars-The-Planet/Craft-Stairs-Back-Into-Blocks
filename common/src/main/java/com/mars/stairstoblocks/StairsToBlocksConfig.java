@@ -6,6 +6,7 @@ import com.mars.deimos.config.DeimosConfig;
 import java.util.List;
 
 public class StairsToBlocksConfig extends DeimosConfig {
+    @Entry public static boolean show_wishful_recipes_message = true;
     @Entry public static int block_amount = 4;
     @Entry public static boolean add_recipes_manually = false;
     @Entry public static List<String> block_stairs_list = Lists.newArrayList(
