@@ -16,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -25,7 +24,7 @@ import static com.mars.stairstoblocks.StairsToBlocksConfig.block_amount;
 
 @Mixin(value = RecipeManager.class, priority = 900)
 public class RecipeManagerMixin {
-    @Inject(method = "apply", at = @At("HEAD"))
+    @Inject(method = "apply*", at = @At("HEAD"))
     private void onRecipesLoaded(Map<ResourceLocation, JsonElement> map, ResourceManager resourceManager, ProfilerFiller profiler, CallbackInfo info) {
         if(add_recipes_manually)
             return;
