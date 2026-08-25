@@ -33,7 +33,6 @@ public class RecipeManagerMixin {
         for (var entry : map.entrySet()) {
             if(hasStairsPattern(entry.getValue())){
                 String[] set = extractKeyAndResult(entry.getValue());
-                System.out.println(Arrays.toString(extractKeyAndResult(entry.getValue())));
                 DeimosRecipeGenerator.createShapedRecipeJson(
                         Lists.newArrayList(
                                 '#'
